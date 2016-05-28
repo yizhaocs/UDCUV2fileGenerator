@@ -25,7 +25,7 @@ public class Main {
             while (scanner.hasNextLine()) {
                 String cookieID = scanner.nextLine().trim();
                 // ckvraw|20|103467387633636100|2044=;12345|103467387633636100|80|80|80
-                bw.write("ckvraw" + "|" + time_stamp + "|" + cookieID + "|" + key + "=" + value + "|" + "|||");
+                bw.write("ckvraw" + "|" + time_stamp + "|" + cookieID + "|" + key + "=" + value + "|" + "null" + "|||");
                 bw.newLine();
             }
 
