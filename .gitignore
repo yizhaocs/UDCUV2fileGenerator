@@ -9,4 +9,3 @@ target/*
 **/CVS/*
 /CVS/
 dist/*
-/src/
