@@ -13,7 +13,7 @@ public class Main {
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
-        File fout = new File("/Users/yzhao/Desktop/20160531-000001.ps1-lax1.1464113893553.csv");
+        File fout = new File("/Users/yzhao/Desktop/20160531-000001.united-lax1.1.csv");
         Scanner scanner = null;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
