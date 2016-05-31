@@ -1,4 +1,6 @@
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -13,7 +15,7 @@ public class Main {
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
-        File fout = new File("/Users/yzhao/Desktop/20160531-000001.united-lax1.1.csv");
+        File fout = new File("/Users/yzhao/Desktop/" + getCurrentDate() + "-000001.united-lax1.1.csv");
         Scanner scanner = null;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
@@ -42,5 +44,11 @@ public class Main {
                 e.printStackTrace();
             }
         }
+    }
+
+    private static String getCurrentDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        Date date = new Date();
+        return dateFormat.format(date).toString();
     }
 }
