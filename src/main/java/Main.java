@@ -8,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
         String key = "22417";
-        String value = "20160524";
-        String time_stamp = "1464386287"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
+        String value = "20160527";
+        String time_stamp = "1464722706"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
-        File fout = new File("/Users/yzhao/Desktop/20160212-000001.ps1-lax1.1464113893552.csv");
+        File fout = new File("/Users/yzhao/Desktop/20160531-000001.ps1-lax1.1464113893553.csv");
         Scanner scanner = null;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
