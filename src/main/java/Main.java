@@ -9,17 +9,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String key = "22417";
-        String value = "20160527";
-        String time_stamp = "1464722706"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
+        String key = "22571";
+        String value = "20160603";
+        String time_stamp = "1465233434"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
-        File fout = new File("/Users/yzhao/Desktop/" + getCurrentDate() + "-000001.united-lax1.1.csv");
+        File fout = new File("/Users/yzhao/Desktop/" + getCurrentDate() + "-000001.united-lax1." + time_stamp + "000" + ".csv");
         Scanner scanner = null;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
-
+        int count = 0;
         try {
             scanner = new Scanner(file);
             fos = new FileOutputStream(fout);
@@ -29,6 +29,7 @@ public class Main {
                 // ckvraw|20|103467387633636100|2044=;12345|103467387633636100|80|80|80
                 bw.write("ckvraw" + "|" + time_stamp + "|" + cookieID + "|" + key + "=" + value + "|" + "null" + "|||");
                 bw.newLine();
+                count++;
             }
 
         } catch (FileNotFoundException e) {
@@ -44,6 +45,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
+        System.out.println("Count row:" + count);
     }
 
     private static String getCurrentDate() {
