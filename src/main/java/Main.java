@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String key = "22571";
-        String value = "20160603";
-        String time_stamp = "1465233434"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
+        String key = "26102"; // get it from SELECT name, description, key_id, usage_type FROM data_provider_keys WHERE dp_id=1020 and lower(name) like '%xu_ptsfls%';
+        String value = "2017-04-07"; // get it from /tmp/2017-04-07_United_HCA_IN_kly.txt
+        String time_stamp = "1491841986"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
