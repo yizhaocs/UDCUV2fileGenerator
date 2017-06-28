@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String key = "26102"; // get it from SELECT name, description, key_id, usage_type FROM data_provider_keys WHERE dp_id=1020 and lower(name) like '%xu_ptsfls%';
-        String value = "2017-04-07"; // get it from /tmp/2017-04-07_United_HCA_IN_kly.txt
-        String time_stamp = "1491841986"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
+        String key = "27039"; // get it from SELECT name, description, key_id, usage_type FROM data_provider_keys WHERE dp_id=1020 and lower(name) like '%xu_ptsfls%';
+        String value = "1"; // get it from /tmp/2017-04-07_United_HCA_IN_kly.txt
+        String time_stamp = "1498155018"; // gets from http://www.epochconverter.com/, then append 000 to the end of current time
 
         // Location of file to read
         File file = new File("/Users/yzhao/Desktop/table_dump_outout.csv");
-        File fout = new File("/Users/yzhao/Desktop/" + getCurrentDate() + "-000001.united-lax1." + time_stamp + "000" + ".csv");
+        File fout = new File("/Users/yzhao/Desktop/" + getCurrentDate() + "-000001.united-lax1." + time_stamp + "000" + ".csv"); // 文件名不能有.force，否则不会有clog文件，则不会load到netezza
         Scanner scanner = null;
         FileOutputStream fos = null;
         BufferedWriter bw = null;
